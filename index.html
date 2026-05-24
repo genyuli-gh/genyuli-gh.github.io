@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal academic website with research, lecture notes, and CV."
+    >
+    <title>Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="content.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="#about" data-profile-name>Your Name</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#notes">Lecture Notes</a>
+          <a href="assets/cv.pdf" data-cv-link>CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="about" class="profile-section" aria-labelledby="profile-name">
+        <div class="profile-copy">
+          <p class="profile-title" data-profile-title>Your title or affiliation</p>
+          <h1 id="profile-name" data-profile-name>Your Name</h1>
+          <div class="intro" data-profile-intro>
+            <p>
+              I am a researcher in economics. This is placeholder text for a short
+              self-introduction, research interests, affiliation, and contact details.
+            </p>
+          </div>
+          <div class="link-row" data-profile-links>
+            <a href="assets/cv.pdf">CV</a>
+          </div>
+        </div>
+
+        <figure class="portrait-panel">
+          <img data-profile-portrait alt="" hidden>
+          <div class="portrait-placeholder" data-portrait-placeholder>
+            <span>Portrait</span>
+          </div>
+          <figcaption data-profile-caption>Replace with your photo when ready.</figcaption>
+        </figure>
+      </section>
+
+      <section id="research" class="section" aria-labelledby="research-heading">
+        <div class="section-heading">
+          <h2 id="research-heading">Research</h2>
+          <p data-research-summary>
+            Working papers and publications will appear here.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <section class="research-column" aria-labelledby="working-papers-heading">
+            <h3 id="working-papers-heading">Working Papers</h3>
+            <div class="entry-list" data-working-papers></div>
+          </section>
+
+          <section class="research-column" aria-labelledby="publications-heading">
+            <h3 id="publications-heading">Published &amp; Forthcoming</h3>
+            <div class="entry-list" data-publications></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="notes" class="section" aria-labelledby="notes-heading">
+        <div class="section-heading">
+          <h2 id="notes-heading">Lecture Notes</h2>
+          <p data-notes-summary>
+            Notes, reading lists, and teaching materials will appear here.
+          </p>
+        </div>
+        <div class="notes-list" data-lecture-notes></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong data-profile-name>Your Name</strong>
+        <span data-last-updated></span>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript-message">
+        This website uses a small local content file. Please enable JavaScript to
+        view the editable research and lecture-note lists.
+      </div>
+    </noscript>
+  </body>
+</html>
