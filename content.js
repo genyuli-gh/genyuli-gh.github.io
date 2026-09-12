@@ -1,11 +1,10 @@
 // Edit this file when you want to update your homepage content.
 window.SITE_CONTENT = {
   profile: {
-    name: "Your Name",
-    title: "Your title or affiliation",
+    name: "Genyu Li",
+    title: "PhD student in UNC at Chapel Hill",
     intro: [
-      "I am a researcher in economics. Replace this paragraph with a short self-introduction, including your affiliation, field, and broad research interests.",
-      "My current work studies topics in microeconomic theory, information economics, and related areas. Replace this sentence with your own research description."
+      "I am a fifth year student PhD in Economics at UNC at Chapel Hill. I am currently working on multi-dimensional information design."
     ],
     portrait: {
       src: "assets/portrait-placeholder.png",
