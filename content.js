@@ -23,14 +23,10 @@ window.SITE_CONTENT = {
     summary: "Research papers are separated by current working papers and published or forthcoming work.",
     workingPapers: [
       {
-        title: "Working Paper Title",
-        coauthors: "with Coauthor Name",
-        status: "Draft in progress",
-        date: "Updated May 2026",
-        abstract: "Replace this with a concise abstract or summary. You can leave the abstract blank if you only want to show the title, coauthors, and links.",
+        title: "Persuasion in Ordered Posterior Mean",
+        status: "Paper not available yet",
         links: [
-          { label: "PDF", url: "#" },
-          { label: "Slides", url: "#" }
+          { label: "Poster (PDF)", url: "assets/persuasion-in-ordered-posterior-mean-poster.pdf" }
         ]
       }
     ],
@@ -51,5 +47,5 @@ window.SITE_CONTENT = {
   },
 
   cvUrl: "assets/cv.pdf",
-  lastUpdated: "May 2026"
+  lastUpdated: "September 2026"
 };
