@@ -189,8 +189,7 @@ h4 {
   margin: 0;
 }
 
-.portrait-panel img,
-.portrait-placeholder {
+.portrait-panel img {
   width: 100%;
   aspect-ratio: 4 / 5;
   display: block;
@@ -200,21 +199,8 @@ h4 {
   object-fit: cover;
 }
 
-.portrait-panel img[hidden],
-.portrait-placeholder[hidden] {
+.portrait-panel img[hidden] {
   display: none;
-}
-
-.portrait-placeholder {
-  display: grid;
-  place-items: center;
-  background:
-    linear-gradient(135deg, rgba(0, 109, 119, 0.16), rgba(140, 29, 64, 0.12)),
-    repeating-linear-gradient(0deg, #f9fafb, #f9fafb 18px, #eef1f5 19px);
-  color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
-  text-transform: uppercase;
 }
 
 figcaption {
@@ -246,6 +232,10 @@ figcaption {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
+}
+
+.research-grid.single-column {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .research-column,

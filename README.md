@@ -15,7 +15,7 @@ it as the operating guide.
 - `script.js`: renders `content.js` into the page. Edit only when changing site
   behavior.
 - `assets/cv.pdf`: downloadable CV file.
-- `assets/portrait-placeholder.png`: current portrait placeholder.
+- `assets/academic-study.png`: current profile illustration.
 - `notes/`: lecture note pages or files.
 - `.nojekyll`: tells GitHub Pages to serve this as a plain static site.
 - `preview.ps1` and `Preview Website.cmd`: local preview helpers.
@@ -31,8 +31,8 @@ it as the operating guide.
 - Keep `.nojekyll` in place.
 - Do not delete or replace the user's CV, portrait, papers, or notes unless the
   user explicitly asks.
-- After meaningful edits, preview locally and check that About, Research,
-  Lecture Notes, and CV still work.
+- After meaningful edits, preview locally and check About, Research, and enabled
+  links. Confirm hidden sections and unavailable links remain inactive.
 - Keep content data simple and human-editable. Avoid moving routine content into
   `index.html`.
 
@@ -47,6 +47,7 @@ Edit:
 - `profile.name`
 - `profile.title`
 - `profile.intro`
+- `profile.email`
 - `profile.links`
 - `profile.portrait`
 - `cvUrl`
@@ -62,6 +63,14 @@ portrait: {
   caption: ""
 }
 ```
+
+### Temporary artwork
+
+`assets/academic-study.png` was created with built-in image generation as temporary
+profile artwork. Replace it through `profile.portrait` when a personal portrait is
+available. The generation prompt was:
+
+> Use case: illustration-story. Asset type: temporary portrait-area image for a personal academic website, portrait orientation 4:5. Primary request: a tasteful neutral academic illustration of a quiet study: a wooden desk with an open book beside a tall window, soft green foliage outside. Style: refined editorial watercolor and ink on lightly textured paper, mature and understated, harmonious muted teal, warm cream, and subtle burgundy accents. Composition: simple, calm, carefully balanced vertical composition, main scene clearly readable in a small 320-pixel-wide website image. Soft natural daylight. No people, no human portrait, no readable text, no labels, no logos, no watermark, no border.
 
 ### Research
 
@@ -95,16 +104,17 @@ Each paper can use this shape:
 }
 ```
 
-Leave `publications: []` if there are no published papers yet. The page will
-show a clean empty state.
+Leave `publications: []` if there are no published papers yet. The Published &
+Forthcoming column stays hidden, and Working Papers uses the full width. Adding
+an entry automatically restores the publications column.
 
 ### Lecture Notes
 
 The section and its navigation link are currently hidden. To bring both back,
 set `lectureNotes.enabled` to `true` in `content.js`; set it to `false` to hide
-them again. The layout, example item, and files in `notes/` are preserved.
-Replace the example item with your real notes before showing the section.
-No HTML or renderer changes are needed to restore it.
+them again. The layout and files in `notes/` are preserved. The items list is
+currently empty; add your notes before showing the section. No HTML or renderer
+changes are needed to restore it.
 
 Put lecture note files in `notes/` and list them in:
 

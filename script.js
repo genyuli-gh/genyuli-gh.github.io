@@ -42,7 +42,7 @@
 
   function renderProfile() {
     const profile = content.profile || {};
-    const name = profile.name || "Your Name";
+    const name = profile.name || "Genyu Li";
 
     setText("[data-profile-name]", name);
     setText("[data-profile-title]", profile.title || "");
@@ -74,20 +74,17 @@
 
     const portrait = profile.portrait || {};
     const image = document.querySelector("[data-profile-portrait]");
-    const placeholder = document.querySelector("[data-portrait-placeholder]");
     const caption = document.querySelector("[data-profile-caption]");
 
     if (image && portrait.src) {
       image.src = portrait.src;
       image.alt = portrait.alt || "";
       image.hidden = false;
-      if (placeholder) {
-        placeholder.hidden = true;
-      }
     }
 
     if (caption) {
       caption.textContent = portrait.caption || "";
+      caption.hidden = !portrait.caption;
     }
   }
 
@@ -149,15 +146,26 @@
 
   function renderResearch() {
     const research = content.research || {};
+    const publications = research.publications || [];
+    const publicationsSection = document.querySelector("[data-publications-section]");
+    const researchGrid = document.querySelector("[data-research-grid]");
+
+    if (publicationsSection) {
+      publicationsSection.hidden = publications.length === 0;
+    }
+    if (researchGrid) {
+      researchGrid.classList.toggle("single-column", publications.length === 0);
+    }
+
     renderPaperList(
       "[data-working-papers]",
       research.workingPapers || [],
-      "Working papers will be listed here."
+      "No working papers available."
     );
     renderPaperList(
       "[data-publications]",
-      research.publications || [],
-      "No published or forthcoming papers yet."
+      publications,
+      "No published papers available."
     );
   }
 
@@ -171,8 +179,6 @@
       return;
     }
 
-    setText("[data-notes-summary]", notes.summary || "");
-
     const container = document.querySelector("[data-lecture-notes]");
     if (!container) {
       return;
@@ -182,7 +188,7 @@
     if (items.length === 0) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
-      empty.textContent = "Lecture notes will be listed here.";
+      empty.textContent = "No notes available.";
       clearAndAppend(container, [empty]);
       return;
     }

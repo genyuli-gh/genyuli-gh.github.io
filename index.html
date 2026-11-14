@@ -8,9 +8,9 @@
       content="I am a fifth year student PhD in Economics at UNC at Chapel Hill. I am currently working on multi-dimensional information design."
     >
     <title>Genyu Li</title>
-    <link rel="stylesheet" href="styles.css?v=20261114-contact">
-    <script src="content.js?v=20261114-research" defer></script>
-    <script src="script.js?v=20261114-research" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261114-cleanup">
+    <script src="content.js?v=20261114-cleanup" defer></script>
+    <script src="script.js?v=20261114-cleanup" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -45,11 +45,8 @@
         </div>
 
         <figure class="portrait-panel">
-          <img data-profile-portrait alt="" hidden>
-          <div class="portrait-placeholder" data-portrait-placeholder>
-            <span>Portrait</span>
-          </div>
-          <figcaption data-profile-caption>Replace with your photo when ready.</figcaption>
+          <img src="assets/academic-study.png" data-profile-portrait alt="Illustration of a quiet study with books beside a window">
+          <figcaption data-profile-caption hidden></figcaption>
         </figure>
       </section>
 
@@ -58,13 +55,13 @@
           <h2 id="research-heading">Research</h2>
         </div>
 
-        <div class="research-grid">
+        <div class="research-grid single-column" data-research-grid>
           <section class="research-column" aria-labelledby="working-papers-heading">
             <h3 id="working-papers-heading">Working Papers</h3>
             <div class="entry-list" data-working-papers></div>
           </section>
 
-          <section class="research-column" aria-labelledby="publications-heading">
+          <section class="research-column" aria-labelledby="publications-heading" data-publications-section hidden>
             <h3 id="publications-heading">Published &amp; Forthcoming</h3>
             <div class="entry-list" data-publications></div>
           </section>
@@ -74,9 +71,6 @@
       <section id="notes" class="section" aria-labelledby="notes-heading" data-notes-section hidden>
         <div class="section-heading">
           <h2 id="notes-heading">Lecture Notes</h2>
-          <p data-notes-summary>
-            Notes, reading lists, and teaching materials will appear here.
-          </p>
         </div>
         <div class="notes-list" data-lecture-notes></div>
       </section>
@@ -91,8 +85,7 @@
 
     <noscript>
       <div class="noscript-message">
-        This website uses a small local content file. Please enable JavaScript to
-        view all page content.
+        Enable JavaScript to view research papers.
       </div>
     </noscript>
   </body>

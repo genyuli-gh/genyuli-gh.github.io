@@ -8,9 +8,9 @@ window.SITE_CONTENT = {
     ],
     email: "genyuli@ad.unc.edu",
     portrait: {
-      src: "assets/portrait-placeholder.png",
-      alt: "Portrait placeholder",
-      caption: "Replace this with your photo when ready."
+      src: "assets/academic-study.png",
+      alt: "Illustration of a quiet study with books beside a window",
+      caption: ""
     },
     links: [
       { label: "CV", disabled: true },
@@ -36,16 +36,7 @@ window.SITE_CONTENT = {
 
   lectureNotes: {
     enabled: false, // Set to true to show the section and navigation link again.
-    summary: "Lecture notes, reading lists, and teaching material can be linked here as PDFs or web pages.",
-    items: [
-      {
-        title: "Lecture Note Title",
-        course: "Course or topic name",
-        date: "Spring 2026",
-        description: "Replace this with a short description of the note or reading list.",
-        url: "notes/sample-note.html"
-      }
-    ]
+    items: []
   },
 
   cvUrl: "",
