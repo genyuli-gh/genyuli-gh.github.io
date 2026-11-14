@@ -174,8 +174,16 @@ h4 {
   margin-bottom: 0;
 }
 
+.profile-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.85rem;
+}
+
 .profile-email {
-  margin: 0.85rem 0 0;
+  margin: 0;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -199,7 +207,7 @@ h4 {
 }
 
 .link-row {
-  margin-top: 0.65rem;
+  margin: 0;
 }
 
 .entry-links {

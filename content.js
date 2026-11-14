@@ -17,8 +17,7 @@ window.SITE_CONTENT = {
       caption: ""
     },
     links: [
-      { label: "CV", disabled: true },
-      { label: "Google Scholar", disabled: true }
+      { label: "CV", disabled: true }
     ]
   },
 
