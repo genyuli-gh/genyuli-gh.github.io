@@ -18,6 +18,16 @@
   }
 
   function createLink(link, className) {
+    if (link.disabled) {
+      const label = document.createElement("span");
+      label.textContent = link.label;
+      label.className = "unavailable-link";
+      label.setAttribute("role", "link");
+      label.setAttribute("aria-disabled", "true");
+      label.title = "Currently unavailable";
+      return label;
+    }
+
     const anchor = document.createElement("a");
     anchor.textContent = link.label;
     anchor.href = link.url || "#";
@@ -36,6 +46,7 @@
 
     setText("[data-profile-name]", name);
     setText("[data-profile-title]", profile.title || "");
+    setText("[data-profile-email]", profile.email || "");
     document.title = name;
 
     const description = document.querySelector("meta[name='description']");
@@ -54,9 +65,11 @@
       clearAndAppend(links, (profile.links || []).map((link) => createLink(link)));
     }
 
-    const cvUrl = content.cvUrl || "assets/cv.pdf";
+    const cvUrl = content.cvUrl || "";
     document.querySelectorAll("[data-cv-link]").forEach((link) => {
-      link.href = cvUrl;
+      const cvLink = createLink({ label: "CV", url: cvUrl, disabled: !cvUrl });
+      cvLink.setAttribute("data-cv-link", "");
+      link.replaceWith(cvLink);
     });
 
     const portrait = profile.portrait || {};

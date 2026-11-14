@@ -6,15 +6,15 @@ window.SITE_CONTENT = {
     intro: [
       "I am a fifth year student PhD in Economics at UNC at Chapel Hill. I am currently working on multi-dimensional information design."
     ],
+    email: "genyuli@ad.unc.edu",
     portrait: {
       src: "assets/portrait-placeholder.png",
       alt: "Portrait placeholder",
       caption: "Replace this with your photo when ready."
     },
     links: [
-      { label: "CV", url: "assets/cv.pdf" },
-      { label: "Email", url: "mailto:your.email@example.com" },
-      { label: "Google Scholar", url: "#" }
+      { label: "CV", disabled: true },
+      { label: "Google Scholar", disabled: true }
     ]
   },
 
@@ -48,6 +48,6 @@ window.SITE_CONTENT = {
     ]
   },
 
-  cvUrl: "assets/cv.pdf",
+  cvUrl: "",
   lastUpdated: "November 2026"
 };
