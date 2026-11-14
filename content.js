@@ -22,9 +22,12 @@ window.SITE_CONTENT = {
     summary: "Research papers are separated by current working papers and published or forthcoming work.",
     workingPapers: [
       {
-        title: "Persuasion in Ordered Posterior Mean",
-        status: "Paper not available yet",
+        title: "Persuasion with Ordered Posterior Means",
+        status: "Working paper",
+        date: "November 14, 2026",
+        url: "assets/persuasion-with-ordered-posterior-means.pdf",
         links: [
+          { label: "Paper (PDF)", url: "assets/persuasion-with-ordered-posterior-means.pdf" },
           { label: "Poster (PDF)", url: "assets/persuasion-in-ordered-posterior-mean-poster.pdf" }
         ]
       }
@@ -46,5 +49,5 @@ window.SITE_CONTENT = {
   },
 
   cvUrl: "assets/cv.pdf",
-  lastUpdated: "September 2026"
+  lastUpdated: "November 2026"
 };
