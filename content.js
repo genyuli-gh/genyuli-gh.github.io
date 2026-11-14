@@ -19,7 +19,6 @@ window.SITE_CONTENT = {
   },
 
   research: {
-    summary: "Research papers are separated by current working papers and published or forthcoming work.",
     workingPapers: [
       {
         title: "Persuasion with Ordered Posterior Means",

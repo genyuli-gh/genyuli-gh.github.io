@@ -149,7 +149,6 @@
 
   function renderResearch() {
     const research = content.research || {};
-    setText("[data-research-summary]", research.summary || "");
     renderPaperList(
       "[data-working-papers]",
       research.workingPapers || [],
