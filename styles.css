@@ -34,7 +34,7 @@ body {
 a {
   color: var(--accent);
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.12em;
 }
 
 a:hover {
@@ -115,7 +115,7 @@ section[id] {
   grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
   gap: clamp(2rem, 6vw, 5rem);
   align-items: center;
-  padding: clamp(3rem, 7vw, 5.5rem) 0 3.2rem;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 2.5rem;
 }
 
 .profile-title {
@@ -170,10 +170,15 @@ h4 {
   margin: 0 0 1rem;
 }
 
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
 .profile-email {
-  margin: 1rem 0 0;
+  margin: 0.85rem 0 0;
   font-family: var(--font-sans);
   font-size: 0.95rem;
+  line-height: 1.5;
   overflow-wrap: anywhere;
 }
 
@@ -186,16 +191,26 @@ h4 {
 .entry-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  margin-top: 1.4rem;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
   font-family: var(--font-sans);
   font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.link-row {
+  margin-top: 0.65rem;
+}
+
+.entry-links {
+  margin-top: 0.55rem;
 }
 
 .link-row a,
 .small-link {
-  border-bottom: 1px solid currentColor;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
 }
 
 .portrait-panel {
@@ -225,7 +240,7 @@ figcaption {
 
 .section {
   border-top: 1px solid var(--line);
-  padding: clamp(2.4rem, 6vw, 4rem) 0;
+  padding: clamp(2rem, 4vw, 3rem) 0;
 }
 
 .section-heading {
@@ -233,7 +248,7 @@ figcaption {
   grid-template-columns: minmax(170px, 0.34fr) minmax(0, 1fr);
   gap: clamp(1rem, 4vw, 3rem);
   align-items: start;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-heading p {
@@ -260,6 +275,10 @@ figcaption {
   box-shadow: 0 8px 24px rgba(36, 38, 43, 0.05);
 }
 
+.research-column > h3 {
+  margin-bottom: 0.8rem;
+}
+
 .entry-list {
   display: grid;
   gap: 1rem;
@@ -276,7 +295,7 @@ figcaption {
 }
 
 .entry-meta {
-  margin: 0 0 0.55rem;
+  margin: 0;
   color: var(--muted);
   font-family: var(--font-sans);
   font-size: 0.9375rem;

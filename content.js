@@ -30,7 +30,6 @@ window.SITE_CONTENT = {
         date: "November 14, 2026",
         url: "assets/persuasion-with-ordered-posterior-means.pdf",
         links: [
-          { label: "Paper", url: "assets/persuasion-with-ordered-posterior-means.pdf" },
           { label: "Poster", url: "assets/persuasion-in-ordered-posterior-mean-poster.pdf" }
         ]
       }
