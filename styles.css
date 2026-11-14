@@ -10,6 +10,8 @@
   --teal-soft: #e6f2f3;
   --shadow: 0 14px 32px rgba(36, 38, 43, 0.08);
   --container: 1060px;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
 
 * {
@@ -24,9 +26,9 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 17px;
-  line-height: 1.65;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 a {
@@ -86,8 +88,8 @@ a:hover {
   justify-content: flex-end;
   gap: 1.1rem;
   flex-wrap: wrap;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.92rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
 }
 
 .site-nav a {
@@ -104,6 +106,10 @@ main {
   margin: 0 auto;
 }
 
+section[id] {
+  scroll-margin-top: 7.5rem;
+}
+
 .profile-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
@@ -115,10 +121,10 @@ main {
 .profile-title {
   margin: 0 0 0.8rem;
   color: var(--teal);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.96rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 h1,
@@ -130,27 +136,34 @@ h4 {
 
 h1 {
   margin: 0 0 1.1rem;
-  font-size: clamp(2.35rem, 7vw, 4.8rem);
-  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   margin: 0;
-  font-size: clamp(1.75rem, 4vw, 2.45rem);
+  font-size: clamp(1.8rem, 3vw, 2.1rem);
+  font-weight: 400;
 }
 
 h3 {
   margin: 0 0 1.15rem;
-  font-size: 1.18rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 h4 {
   margin: 0 0 0.35rem;
-  font-size: 1.04rem;
+  font-size: 1.1875rem;
+  line-height: 1.4;
 }
 
 .intro {
-  max-width: 720px;
+  max-width: 62ch;
 }
 
 .intro p {
@@ -159,7 +172,7 @@ h4 {
 
 .profile-email {
   margin: 1rem 0 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   overflow-wrap: anywhere;
 }
@@ -175,7 +188,7 @@ h4 {
   flex-wrap: wrap;
   gap: 0.75rem 1rem;
   margin-top: 1.4rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.95rem;
 }
 
@@ -206,7 +219,7 @@ h4 {
 figcaption {
   margin-top: 0.65rem;
   color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.88rem;
 }
 
@@ -265,9 +278,9 @@ figcaption {
 .entry-meta {
   margin: 0 0 0.55rem;
   color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
 }
 
 details {
@@ -277,7 +290,7 @@ details {
 summary {
   cursor: pointer;
   color: var(--teal);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.92rem;
   font-weight: 700;
 }
@@ -306,7 +319,7 @@ details p,
   border-top: 1px solid var(--line);
   padding: 1.6rem 1rem 2.2rem;
   color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.9rem;
 }
 
@@ -330,12 +343,12 @@ details p,
   background: var(--ink);
   color: var(--surface);
   border-radius: 8px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
 @media (max-width: 760px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .header-inner {
