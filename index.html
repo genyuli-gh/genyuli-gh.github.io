@@ -9,8 +9,8 @@
     >
     <title>Genyu Li</title>
     <link rel="stylesheet" href="styles.css?v=20261114-contact">
-    <script src="content.js?v=20261114-contact" defer></script>
-    <script src="script.js?v=20261114-contact" defer></script>
+    <script src="content.js?v=20261114-notes" defer></script>
+    <script src="script.js?v=20261114-notes" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +21,7 @@
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#research">Research</a>
-          <a href="#notes">Lecture Notes</a>
+          <a href="#notes" data-notes-link hidden>Lecture Notes</a>
           <span class="unavailable-link" role="link" aria-disabled="true" title="Currently unavailable" data-cv-link>CV</span>
         </nav>
       </div>
@@ -74,7 +74,7 @@
         </div>
       </section>
 
-      <section id="notes" class="section" aria-labelledby="notes-heading">
+      <section id="notes" class="section" aria-labelledby="notes-heading" data-notes-section hidden>
         <div class="section-heading">
           <h2 id="notes-heading">Lecture Notes</h2>
           <p data-notes-summary>
@@ -95,7 +95,7 @@
     <noscript>
       <div class="noscript-message">
         This website uses a small local content file. Please enable JavaScript to
-        view the editable research and lecture-note lists.
+        view all page content.
       </div>
     </noscript>
   </body>

@@ -36,6 +36,7 @@ window.SITE_CONTENT = {
   },
 
   lectureNotes: {
+    enabled: false, // Set to true to show the section and navigation link again.
     summary: "Lecture notes, reading lists, and teaching material can be linked here as PDFs or web pages.",
     items: [
       {

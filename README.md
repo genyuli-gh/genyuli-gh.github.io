@@ -100,6 +100,12 @@ show a clean empty state.
 
 ### Lecture Notes
 
+The section and its navigation link are currently hidden. To bring both back,
+set `lectureNotes.enabled` to `true` in `content.js`; set it to `false` to hide
+them again. The layout, example item, and files in `notes/` are preserved.
+Replace the example item with your real notes before showing the section.
+No HTML or renderer changes are needed to restore it.
+
 Put lecture note files in `notes/` and list them in:
 
 ```js

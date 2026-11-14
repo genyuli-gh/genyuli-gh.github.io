@@ -164,6 +164,14 @@
 
   function renderLectureNotes() {
     const notes = content.lectureNotes || {};
+    const enabled = notes.enabled === true;
+    document.querySelectorAll("[data-notes-section], [data-notes-link]").forEach((element) => {
+      element.hidden = !enabled;
+    });
+    if (!enabled) {
+      return;
+    }
+
     setText("[data-notes-summary]", notes.summary || "");
 
     const container = document.querySelector("[data-lecture-notes]");
