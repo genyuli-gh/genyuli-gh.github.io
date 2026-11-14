@@ -2,9 +2,13 @@
 window.SITE_CONTENT = {
   profile: {
     name: "Genyu Li",
-    title: "PhD student in UNC at Chapel Hill",
+    title: "Ph.D. Candidate in Economics",
     intro: [
-      "I am a fifth year student PhD in Economics at UNC at Chapel Hill. I am currently working on multi-dimensional information design."
+      [
+        "I am a Ph.D. candidate in Economics at the University of North Carolina at Chapel Hill. I am fortunate to be advised by ",
+        { label: "Fei Li", url: "https://lifei.weebly.com/" },
+        ". My research focuses on multidimensional information design."
+      ]
     ],
     email: "genyuli@ad.unc.edu",
     portrait: {

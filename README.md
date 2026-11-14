@@ -53,6 +53,10 @@ Edit:
 - `cvUrl`
 - `lastUpdated`
 
+Each entry in `profile.intro` is a paragraph. Use a plain string, or an array
+of strings and `{ label: "Link text", url: "https://example.com/" }` objects
+for inline links. Text is rendered safely without HTML markup.
+
 For a real portrait, put the image in `assets/`, for example
 `assets/portrait.jpg`, then set:
 

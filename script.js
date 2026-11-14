@@ -13,7 +13,10 @@
 
   function paragraph(text) {
     const p = document.createElement("p");
-    p.textContent = text;
+    const parts = Array.isArray(text) ? text : [text];
+    parts.forEach((part) => {
+      p.append(typeof part === "string" ? document.createTextNode(part) : createLink(part));
+    });
     return p;
   }
 
@@ -51,7 +54,7 @@
 
     const description = document.querySelector("meta[name='description']");
     if (description && profile.intro && profile.intro.length) {
-      description.setAttribute("content", profile.intro[0]);
+      description.setAttribute("content", paragraph(profile.intro[0]).textContent);
     }
 
     const intro = document.querySelector("[data-profile-intro]");
